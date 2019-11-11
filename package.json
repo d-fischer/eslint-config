@@ -1,6 +1,6 @@
 {
   "name": "@d-fischer/eslint-config",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "My personal ESLint config.",
   "repository": {
     "type": "git",
@@ -25,7 +25,7 @@
     "typescript": "~3.7.2"
   },
   "files": [
-    "lib",
+    "index.js",
     "LICENSE",
     "README.md"
   ]
