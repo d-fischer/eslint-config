@@ -105,7 +105,12 @@ export = {
 		// errors with ts
 		// 'jsdoc/check-param-names': 'error',
 		// 'jsdoc/require-param': 'error',
-		'jsdoc/check-tag-names': 'error',
+		'jsdoc/check-tag-names': [
+			'error',
+			{
+				definedTags: ['inheritDoc', 'expandParams', 'hideProtected', 'eventListener']
+			}
+		],
 		'jsdoc/newline-after-description': ['error', 'always'],
 		'max-classes-per-file': ['error', 1],
 		'no-bitwise': 'error',
@@ -181,12 +186,5 @@ export = {
 		],
 		'use-isnan': 'error',
 		yoda: ['error', 'never']
-	},
-	settings: {
-		jsdoc: {
-			additionalTagNames: {
-				customTags: ['inheritDoc', 'expandParams']
-			}
-		}
 	}
 };
