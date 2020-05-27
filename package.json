@@ -1,6 +1,6 @@
 {
   "name": "@d-fischer/eslint-config",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "My personal ESLint config.",
   "repository": {
     "type": "git",
@@ -22,7 +22,7 @@
   },
   "peerDependencies": {
     "eslint": "^6.6.0",
-    "typescript": "~3.7.2"
+    "typescript": "^3.7.2"
   },
   "files": [
     "index.js",
