@@ -99,9 +99,18 @@ module.exports = {
             },
             {
                 selector: 'memberLike',
+                format: ['camelCase'],
+                leadingUnderscore: 'allow'
+            },
+            {
+                selector: 'memberLike',
                 modifiers: ['private'],
                 format: ['camelCase'],
                 leadingUnderscore: 'require'
+            },
+            {
+                selector: 'enumMember',
+                format: ['PascalCase', 'UPPER_CASE']
             },
             {
                 selector: 'typeLike',
