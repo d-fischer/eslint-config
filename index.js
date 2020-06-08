@@ -90,7 +90,7 @@ module.exports = {
 
             {
                 selector: 'variable',
-                format: ['camelCase', 'UPPER_CASE']
+                format: ['camelCase', 'PascalCase', 'UPPER_CASE']
             },
             {
                 selector: 'parameter',
@@ -99,7 +99,7 @@ module.exports = {
             },
             {
                 selector: 'memberLike',
-                format: ['camelCase'],
+                format: ['camelCase', 'UPPER_CASE'],
                 leadingUnderscore: 'allow'
             },
             {
