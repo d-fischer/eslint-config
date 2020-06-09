@@ -74,7 +74,7 @@ module.exports = {
             {
                 path: 'never',
                 types: 'never',
-                lib: 'never'
+                lib: 'always'
             }
         ],
         // lots of false positives right now
