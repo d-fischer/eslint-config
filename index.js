@@ -222,7 +222,7 @@ module.exports = {
             'error',
             'always',
             {
-                exceptions: ['*']
+                markers: ['*', '/']
             }
         ],
         'use-isnan': 'error',
