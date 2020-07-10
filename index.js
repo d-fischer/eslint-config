@@ -85,40 +85,40 @@ module.exports = {
             'error',
             {
                 selector: 'default',
-                format: ['camelCase']
+                format: ['strictCamelCase']
             },
 
             {
                 selector: 'variable',
-                format: ['camelCase', 'PascalCase', 'UPPER_CASE']
+                format: ['strictCamelCase', 'StrictPascalCase', 'UPPER_CASE']
             },
             {
                 selector: 'parameter',
-                format: ['camelCase'],
+                format: ['strictCamelCase'],
                 leadingUnderscore: 'allow'
             },
             {
                 selector: 'memberLike',
-                format: ['camelCase', 'UPPER_CASE'],
+                format: ['strictCamelCase', 'UPPER_CASE'],
                 leadingUnderscore: 'allow'
             },
             {
                 selector: 'memberLike',
                 modifiers: ['private'],
-                format: ['camelCase'],
+                format: ['strictCamelCase'],
                 leadingUnderscore: 'require'
             },
             {
                 selector: 'enumMember',
-                format: ['camelCase', 'PascalCase', 'UPPER_CASE']
+                format: ['strictCamelCase', 'StrictPascalCase', 'UPPER_CASE']
             },
             {
                 selector: 'typeLike',
-                format: ['PascalCase']
+                format: ['StrictPascalCase']
             },
             {
                 selector: 'interface',
-                format: ['PascalCase'],
+                format: ['StrictPascalCase'],
                 custom: {
                     regex: '^I[A-Z]',
                     match: false
