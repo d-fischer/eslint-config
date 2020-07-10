@@ -18,11 +18,11 @@
     "eslint-plugin-jsdoc": "^25.4.3"
   },
   "devDependencies": {
-    "eslint": "^6.6.0",
+    "eslint": "^7.4.0",
     "typescript": "~3.9.3"
   },
   "peerDependencies": {
-    "eslint": "^6.6.0",
+    "eslint": "^7.4.0",
     "typescript": "^3.7.2"
   },
   "files": [
