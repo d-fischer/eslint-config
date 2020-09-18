@@ -23,7 +23,7 @@
   },
   "peerDependencies": {
     "eslint": "^7.4.0",
-    "typescript": "^3.7.2"
+    "typescript": ">=3.7.2"
   },
   "files": [
     "index.js",
