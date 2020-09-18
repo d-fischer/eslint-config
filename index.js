@@ -192,7 +192,8 @@ module.exports = {
             }
         ],
         'no-return-await': 'error',
-        'no-shadow': 'error',
+        'no-shadow': 'off',
+        '@typescript-eslint/no-shadow': 'error',
         'no-sparse-arrays': 'error',
         'no-throw-literal': 'error',
         'no-unexpected-multiline': 'error',
