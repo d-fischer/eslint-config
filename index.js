@@ -199,7 +199,10 @@ module.exports = {
         'no-unexpected-multiline': 'error',
         'no-unneeded-ternary': 'error',
         'no-unsafe-finally': 'error',
-        'no-use-before-define': 'error',
+        'no-use-before-define': 'off',
+        '@typescript-eslint/no-use-before-define': [
+            'error'
+        ],
         'no-var': 'error',
         'prefer-arrow-callback': [
             'error',
