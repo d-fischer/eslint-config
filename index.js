@@ -178,7 +178,8 @@ module.exports = {
         'no-new': 'error',
         'no-new-wrappers': 'error',
         'no-prototype-builtins': 'error',
-        'no-redeclare': 'error',
+        'no-redeclare': 'off',
+        '@typescript-eslint/no-redeclare': 'error',
         'no-restricted-syntax': [
             'error',
             {
