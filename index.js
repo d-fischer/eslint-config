@@ -26,6 +26,14 @@ module.exports = {
                 }
             }
         ],
+        '@typescript-eslint/explicit-module-boundary-types': [
+            'error',
+            {
+                allowArgumentsExplicitlyTypedAsAny: true,
+                allowHigherOrderFunctions: true,
+                allowTypedFunctionExpressions: true
+            }
+        ],
         '@typescript-eslint/member-ordering': [
             'error',
             {
