@@ -49,6 +49,7 @@ module.exports = {
                 ]
             }
         ],
+        '@typescript-eslint/no-duplicate-imports': 'error',
         '@typescript-eslint/no-empty-interface': 'error',
         '@typescript-eslint/no-explicit-any': 'error',
         '@typescript-eslint/no-extraneous-class': 'error',
@@ -172,7 +173,6 @@ module.exports = {
         'no-console': 'error',
         'no-debugger': 'error',
         'no-duplicate-case': 'error',
-        'no-duplicate-imports': 'error',
         'no-empty': 'error',
         'no-empty-character-class': 'error',
         'no-eval': 'error',
