@@ -61,7 +61,9 @@ module.exports = {
             }
         ],
         '@typescript-eslint/no-misused-new': 'error',
+        '@typescript-eslint/no-redeclare': 'error',
         '@typescript-eslint/no-require-imports': 'error',
+        '@typescript-eslint/no-shadow': 'error',
         '@typescript-eslint/no-this-alias': [
             'error',
             {
@@ -70,6 +72,7 @@ module.exports = {
         ],
         '@typescript-eslint/no-unnecessary-qualifier': 'error',
         '@typescript-eslint/no-useless-constructor': 'error',
+        '@typescript-eslint/no-use-before-define': 'error',
         '@typescript-eslint/prefer-function-type': 'error',
         '@typescript-eslint/promise-function-async': [
             'error',
@@ -187,8 +190,6 @@ module.exports = {
         'no-new': 'error',
         'no-new-wrappers': 'error',
         'no-prototype-builtins': 'error',
-        'no-redeclare': 'off',
-        '@typescript-eslint/no-redeclare': 'error',
         'no-restricted-syntax': [
             'error',
             {
@@ -202,17 +203,11 @@ module.exports = {
             }
         ],
         'no-return-await': 'error',
-        'no-shadow': 'off',
-        '@typescript-eslint/no-shadow': 'error',
         'no-sparse-arrays': 'error',
         'no-throw-literal': 'error',
         'no-unexpected-multiline': 'error',
         'no-unneeded-ternary': 'error',
         'no-unsafe-finally': 'error',
-        'no-use-before-define': 'off',
-        '@typescript-eslint/no-use-before-define': [
-            'error'
-        ],
         'no-var': 'error',
         'prefer-arrow-callback': [
             'error',
