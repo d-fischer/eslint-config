@@ -103,14 +103,6 @@ module.exports = {
 		'@typescript-eslint/no-empty-function': 'error',
 		'@typescript-eslint/no-empty-interface': 'error',
 		'@typescript-eslint/no-explicit-any': 'error',
-		'@typescript-eslint/no-extra-parens': [
-			'error',
-			'all',
-			{
-				conditionalAssign: false,
-				nestedBinaryExpressions: false
-			}
-		],
 		'@typescript-eslint/no-extra-non-null-assertion': 'error',
 		'@typescript-eslint/no-extra-semi': 'error',
 		'@typescript-eslint/no-extraneous-class': 'error',
