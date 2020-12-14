@@ -1,7 +1,11 @@
+const useTypeInfo = !process.env.DF_ESLINT_NO_TYPE_INFO;
+const ifTypeInfo = val => (useTypeInfo ? val : ['off']);
+const errorIfTypeInfo = ifTypeInfo('error');
+
 module.exports = {
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
-		project: 'tsconfig.json',
+		project: useTypeInfo ? 'tsconfig.json' : undefined,
 		ecmaVersion: 2019,
 		sourceType: 'module'
 	},
@@ -9,7 +13,7 @@ module.exports = {
 	rules: {
 		'@typescript-eslint/adjacent-overload-signatures': 'error',
 		'@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
-		'@typescript-eslint/await-thenable': 'error',
+		'@typescript-eslint/await-thenable': errorIfTypeInfo,
 		'@typescript-eslint/ban-ts-comment': [
 			'error',
 			{
@@ -39,7 +43,7 @@ module.exports = {
 				disallowTypeAnnotations: true
 			}
 		],
-		'@typescript-eslint/dot-notation': 'error',
+		'@typescript-eslint/dot-notation': errorIfTypeInfo,
 		'@typescript-eslint/explicit-member-accessibility': [
 			'error',
 			{
@@ -85,14 +89,14 @@ module.exports = {
 			}
 		],
 		'@typescript-eslint/method-signature-style': ['error', 'property'],
-		'@typescript-eslint/no-base-to-string': 'error',
+		'@typescript-eslint/no-base-to-string': errorIfTypeInfo,
 		'@typescript-eslint/no-confusing-non-null-assertion': 'error',
-		'@typescript-eslint/no-confusing-void-expression': [
+		'@typescript-eslint/no-confusing-void-expression': ifTypeInfo([
 			'error',
 			{
 				ignoreArrowShorthand: true
 			}
-		],
+		]),
 		'@typescript-eslint/no-dynamic-delete': 'error',
 		'@typescript-eslint/no-dupe-class-members': 'error',
 		'@typescript-eslint/no-duplicate-imports': 'error',
@@ -110,14 +114,14 @@ module.exports = {
 		'@typescript-eslint/no-extra-non-null-assertion': 'error',
 		'@typescript-eslint/no-extra-semi': 'error',
 		'@typescript-eslint/no-extraneous-class': 'error',
-		'@typescript-eslint/no-floating-promises': [
+		'@typescript-eslint/no-floating-promises': ifTypeInfo([
 			'error',
 			{
 				ignoreVoid: true
 			}
-		],
-		'@typescript-eslint/no-for-in-array': 'error',
-		'@typescript-eslint/no-implied-eval': 'error',
+		]),
+		'@typescript-eslint/no-for-in-array': errorIfTypeInfo,
+		'@typescript-eslint/no-implied-eval': errorIfTypeInfo,
 		'@typescript-eslint/no-inferrable-types': [
 			'error',
 			{
@@ -140,44 +144,44 @@ module.exports = {
 				allowDestructuring: true
 			}
 		],
-		'@typescript-eslint/no-throw-literal': 'error',
-		'@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
-		'@typescript-eslint/no-unnecessary-condition': [
+		'@typescript-eslint/no-throw-literal': errorIfTypeInfo,
+		'@typescript-eslint/no-unnecessary-boolean-literal-compare': errorIfTypeInfo,
+		'@typescript-eslint/no-unnecessary-condition': ifTypeInfo([
 			'error',
 			{
 				allowConstantLoopConditions: true
 			}
-		],
-		'@typescript-eslint/no-unnecessary-qualifier': 'error',
-		'@typescript-eslint/no-unnecessary-type-arguments': 'error',
-		'@typescript-eslint/no-unnecessary-type-assertion': 'error',
+		]),
+		'@typescript-eslint/no-unnecessary-qualifier': errorIfTypeInfo,
+		'@typescript-eslint/no-unnecessary-type-arguments': errorIfTypeInfo,
+		'@typescript-eslint/no-unnecessary-type-assertion': errorIfTypeInfo,
 		'@typescript-eslint/no-unnecessary-type-constraint': 'error',
-		'@typescript-eslint/no-unsafe-assignment': 'error',
-		'@typescript-eslint/no-unsafe-call': 'error',
-		'@typescript-eslint/no-unsafe-member-access': 'error',
-		'@typescript-eslint/no-unsafe-return': 'error',
+		'@typescript-eslint/no-unsafe-assignment': errorIfTypeInfo,
+		'@typescript-eslint/no-unsafe-call': errorIfTypeInfo,
+		'@typescript-eslint/no-unsafe-member-access': errorIfTypeInfo,
+		'@typescript-eslint/no-unsafe-return': errorIfTypeInfo,
 		'@typescript-eslint/no-unused-expressions': 'error',
 		'@typescript-eslint/no-unused-vars': 'error',
 		'@typescript-eslint/no-use-before-define': 'error',
 		'@typescript-eslint/no-useless-constructor': 'error',
 		'@typescript-eslint/no-var-requires': 'error',
-		'@typescript-eslint/non-nullable-type-assertion-style': 'error',
+		'@typescript-eslint/non-nullable-type-assertion-style': errorIfTypeInfo,
 		'@typescript-eslint/prefer-as-const': 'error',
 		'@typescript-eslint/prefer-for-of': 'error',
 		'@typescript-eslint/prefer-function-type': 'error',
-		'@typescript-eslint/prefer-includes': 'error',
-		'@typescript-eslint/prefer-nullish-coalescing': 'error',
+		'@typescript-eslint/prefer-includes': errorIfTypeInfo,
+		'@typescript-eslint/prefer-nullish-coalescing': errorIfTypeInfo,
 		'@typescript-eslint/prefer-optional-chain': 'error',
-		'@typescript-eslint/prefer-readonly': 'error',
-		'@typescript-eslint/prefer-reduce-type-parameter': 'error',
-		'@typescript-eslint/prefer-regexp-exec': 'error',
-		'@typescript-eslint/prefer-string-starts-ends-with': 'error',
-		'@typescript-eslint/promise-function-async': 'error',
-		'@typescript-eslint/require-array-sort-compare': 'error',
-		'@typescript-eslint/restrict-plus-operands': 'error',
-		'@typescript-eslint/restrict-template-expressions': 'error',
-		'@typescript-eslint/return-await': ['error', 'in-try-catch'],
-		'@typescript-eslint/switch-exhaustiveness-check': 'error',
+		'@typescript-eslint/prefer-readonly': errorIfTypeInfo,
+		'@typescript-eslint/prefer-reduce-type-parameter': errorIfTypeInfo,
+		'@typescript-eslint/prefer-regexp-exec': errorIfTypeInfo,
+		'@typescript-eslint/prefer-string-starts-ends-with': errorIfTypeInfo,
+		'@typescript-eslint/promise-function-async': errorIfTypeInfo,
+		'@typescript-eslint/require-array-sort-compare': errorIfTypeInfo,
+		'@typescript-eslint/restrict-plus-operands': errorIfTypeInfo,
+		'@typescript-eslint/restrict-template-expressions': errorIfTypeInfo,
+		'@typescript-eslint/return-await': ifTypeInfo(['error', 'in-try-catch']),
+		'@typescript-eslint/switch-exhaustiveness-check': errorIfTypeInfo,
 		'@typescript-eslint/triple-slash-reference': [
 			'error',
 			{
@@ -186,12 +190,10 @@ module.exports = {
 				lib: 'always'
 			}
 		],
-		// lots of false positives right now?
-		'@typescript-eslint/unbound-method': 'error',
+		'@typescript-eslint/unbound-method': errorIfTypeInfo,
 		'@typescript-eslint/unified-signatures': 'error',
 		'arrow-body-style': ['error', 'as-needed'],
-		camelcase: 'off',
-		'@typescript-eslint/naming-convention': [
+		'@typescript-eslint/naming-convention': ifTypeInfo([
 			'error',
 			{
 				selector: 'default',
@@ -234,7 +236,7 @@ module.exports = {
 					match: false
 				}
 			}
-		],
+		]),
 		'consistent-return': 'error',
 		'default-case': 'error',
 		// not a thing right now
