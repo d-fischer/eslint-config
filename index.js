@@ -9,7 +9,7 @@ module.exports = {
 		ecmaVersion: 2019,
 		sourceType: 'module'
 	},
-	plugins: ['@typescript-eslint', 'filenames', 'fp', 'import', 'jsdoc'],
+	plugins: ['@typescript-eslint', 'filenames', 'fp', 'implicit-dependencies', 'import', 'jsdoc'],
 	rules: {
 		'@typescript-eslint/adjacent-overload-signatures': 'error',
 		'@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
@@ -187,6 +187,7 @@ module.exports = {
 		],
 		'@typescript-eslint/unbound-method': errorIfTypeInfo,
 		'@typescript-eslint/unified-signatures': 'error',
+		'implicit-dependencies/no-implicit': ['error', { peer: true }],
 		'arrow-body-style': ['error', 'as-needed'],
 		'@typescript-eslint/naming-convention': ifTypeInfo([
 			'error',
