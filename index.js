@@ -43,6 +43,7 @@ module.exports = {
 				disallowTypeAnnotations: true
 			}
 		],
+		'@typescript-eslint/default-param-last': 'error',
 		'@typescript-eslint/dot-notation': errorIfTypeInfo,
 		'@typescript-eslint/explicit-member-accessibility': [
 			'error',
@@ -61,6 +62,7 @@ module.exports = {
 				allowTypedFunctionExpressions: true
 			}
 		],
+		'@typescript-eslint/init-declarations': ['error', 'always'],
 		'@typescript-eslint/member-delimiter-style': [
 			'error',
 			{
@@ -89,6 +91,7 @@ module.exports = {
 			}
 		],
 		'@typescript-eslint/method-signature-style': ['error', 'property'],
+		'@typescript-eslint/no-array-constructor': 'error',
 		'@typescript-eslint/no-base-to-string': errorIfTypeInfo,
 		'@typescript-eslint/no-confusing-non-null-assertion': 'error',
 		'@typescript-eslint/no-confusing-void-expression': ifTypeInfo([
