@@ -255,7 +255,7 @@ module.exports = {
 		'jsdoc/check-tag-names': [
 			'error',
 			{
-				definedTags: ['inheritDoc', 'expandParams', 'hideProtected', 'eventListener']
+				definedTags: ['inheritDoc', 'expandParams', 'neverExpand', 'hideProtected', 'eventListener']
 			}
 		],
 		'jsdoc/newline-after-description': ['error', 'always'],
