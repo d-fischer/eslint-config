@@ -175,7 +175,7 @@ module.exports = {
 		'@typescript-eslint/require-array-sort-compare': errorIfTypeInfo,
 		'@typescript-eslint/restrict-plus-operands': errorIfTypeInfo,
 		'@typescript-eslint/restrict-template-expressions': errorIfTypeInfo,
-		'@typescript-eslint/return-await': ifTypeInfo(['error', 'in-try-catch']),
+		'@typescript-eslint/return-await': ifTypeInfo(['error', 'always']),
 		'@typescript-eslint/switch-exhaustiveness-check': errorIfTypeInfo,
 		'@typescript-eslint/triple-slash-reference': [
 			'error',
@@ -283,7 +283,6 @@ module.exports = {
 		'no-new': 'error',
 		'no-new-wrappers': 'error',
 		'no-prototype-builtins': 'error',
-		'no-return-await': 'error',
 		'no-sequences': 'error',
 		'no-sparse-arrays': 'error',
 		'no-throw-literal': 'error',
