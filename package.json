@@ -1,6 +1,6 @@
 {
   "name": "@d-fischer/eslint-config",
-  "version": "4.3.1",
+  "version": "5.0.0",
   "description": "My personal ESLint config.",
   "repository": {
     "type": "git",
