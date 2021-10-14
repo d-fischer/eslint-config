@@ -13,8 +13,7 @@
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
     "eslint-plugin-fp": "^2.3.0",
-    "eslint-plugin-import": "^2.25.2",
-    "eslint-plugin-jsdoc": "MichaelDeBoey/eslint-plugin-jsdoc#eslint-8"
+    "eslint-plugin-import": "^2.25.2"
   },
   "devDependencies": {
     "eslint": "^8.0.1",
