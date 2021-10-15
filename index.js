@@ -172,7 +172,7 @@ module.exports = {
 		'@typescript-eslint/prefer-regexp-exec': errorIfTypeInfo,
 		'@typescript-eslint/prefer-string-starts-ends-with': errorIfTypeInfo,
 		'@typescript-eslint/promise-function-async': errorIfTypeInfo,
-		'@typescript-eslint/require-array-sort-compare': errorIfTypeInfo,
+		'@typescript-eslint/require-array-sort-compare': ifTypeInfo(['error', { ignoreStringArrays: true }]),
 		'@typescript-eslint/restrict-plus-operands': errorIfTypeInfo,
 		'@typescript-eslint/restrict-template-expressions': errorIfTypeInfo,
 		'@typescript-eslint/return-await': ifTypeInfo(['error', 'always']),
