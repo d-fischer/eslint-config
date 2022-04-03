@@ -9,7 +9,7 @@ module.exports = {
 		ecmaVersion: 2019,
 		sourceType: 'module'
 	},
-	plugins: ['@typescript-eslint', 'fp', 'import'],
+	plugins: ['@typescript-eslint', 'fp', 'import', 'jsdoc'],
 	rules: {
 		'@typescript-eslint/adjacent-overload-signatures': 'error',
 		'@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
