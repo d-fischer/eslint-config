@@ -247,19 +247,17 @@ module.exports = {
 		'fp/no-delete': 'error',
 		'guard-for-in': 'error',
 		'import/no-unassigned-import': 'error',
-		// temp disable because it doesn't support eslint 8 yet
-		// 'jsdoc/check-alignment': 'error',
-		// 'jsdoc/check-indentation': 'error',
-		// // errors with ts
-		// // 'jsdoc/check-param-names': 'error',
-		// // 'jsdoc/require-param': 'error',
-		// 'jsdoc/check-tag-names': [
-		// 	'error',
-		// 	{
-		// 		definedTags: ['inheritDoc', 'expandParams', 'neverExpand', 'hideProtected', 'eventListener']
-		// 	}
-		// ],
-		// 'jsdoc/newline-after-description': ['error', 'always'],
+		'jsdoc/check-alignment': 'error',
+		'jsdoc/check-indentation': 'error',
+		'jsdoc/check-param-names': 'error',
+		'jsdoc/require-param': 'error',
+		'jsdoc/check-tag-names': [
+			'error',
+			{
+				definedTags: ['inheritDoc', 'expandParams', 'neverExpand', 'hideProtected', 'eventListener']
+			}
+		],
+		'jsdoc/newline-after-description': ['error', 'always'],
 		'max-classes-per-file': ['error', 1],
 		'no-bitwise': 'error',
 		'no-caller': 'error',
