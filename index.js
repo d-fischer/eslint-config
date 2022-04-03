@@ -250,7 +250,12 @@ module.exports = {
 		'jsdoc/check-alignment': 'error',
 		'jsdoc/check-indentation': 'error',
 		'jsdoc/check-param-names': 'error',
-		'jsdoc/require-param': 'error',
+		'jsdoc/require-param': [
+			'error',
+			{
+				exemptedBy: ['inheritDoc', 'private', 'internal']
+			}
+		],
 		'jsdoc/check-tag-names': [
 			'error',
 			{
