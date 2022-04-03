@@ -2,3 +2,5 @@ node_modules/
 /.idea
 /lib
 /*.log
+package-lock.json
+yarn.lock
