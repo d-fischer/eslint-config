@@ -36,10 +36,17 @@ module.exports = {
 			}
 		],
 		'@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
+		'@typescript-eslint/consistent-type-exports': [
+			'error',
+			{
+				fixMixedExportsWithInlineTypeSpecifier: true
+			}
+		],
 		'@typescript-eslint/consistent-type-imports': [
 			'error',
 			{
 				prefer: 'type-imports',
+				fixStyle: 'inline-type-imports',
 				disallowTypeAnnotations: true
 			}
 		],
