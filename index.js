@@ -240,6 +240,7 @@ module.exports = {
 			}
 		]),
 		'consistent-return': 'error',
+		curly: ['error', 'all'],
 		'default-case': 'error',
 		// not a thing right now
 		// 'deprecation': 'error',
