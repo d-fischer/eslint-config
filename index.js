@@ -98,6 +98,50 @@ module.exports = {
 			}
 		],
 		'@typescript-eslint/method-signature-style': ['error', 'property'],
+		'@typescript-eslint/naming-convention': ifTypeInfo([
+			'error',
+			{
+				selector: 'default',
+				format: ['strictCamelCase']
+			},
+
+			{
+				selector: 'variable',
+				format: ['strictCamelCase', 'StrictPascalCase', 'UPPER_CASE']
+			},
+			{
+				selector: 'parameter',
+				format: ['strictCamelCase'],
+				leadingUnderscore: 'allow'
+			},
+			{
+				selector: 'memberLike',
+				format: ['strictCamelCase', 'UPPER_CASE'],
+				leadingUnderscore: 'allow'
+			},
+			{
+				selector: 'memberLike',
+				modifiers: ['private'],
+				format: ['strictCamelCase'],
+				leadingUnderscore: 'require'
+			},
+			{
+				selector: 'enumMember',
+				format: ['strictCamelCase', 'StrictPascalCase', 'UPPER_CASE']
+			},
+			{
+				selector: 'typeLike',
+				format: ['StrictPascalCase']
+			},
+			{
+				selector: 'interface',
+				format: ['StrictPascalCase'],
+				custom: {
+					regex: '^I[A-Z]',
+					match: false
+				}
+			}
+		]),
 		'@typescript-eslint/no-array-constructor': 'error',
 		'@typescript-eslint/no-base-to-string': errorIfTypeInfo,
 		'@typescript-eslint/no-confusing-non-null-assertion': 'error',
@@ -195,55 +239,15 @@ module.exports = {
 		'@typescript-eslint/unbound-method': errorIfTypeInfo,
 		'@typescript-eslint/unified-signatures': 'error',
 		'arrow-body-style': ['error', 'as-needed'],
-		'@typescript-eslint/naming-convention': ifTypeInfo([
-			'error',
-			{
-				selector: 'default',
-				format: ['strictCamelCase']
-			},
-
-			{
-				selector: 'variable',
-				format: ['strictCamelCase', 'StrictPascalCase', 'UPPER_CASE']
-			},
-			{
-				selector: 'parameter',
-				format: ['strictCamelCase'],
-				leadingUnderscore: 'allow'
-			},
-			{
-				selector: 'memberLike',
-				format: ['strictCamelCase', 'UPPER_CASE'],
-				leadingUnderscore: 'allow'
-			},
-			{
-				selector: 'memberLike',
-				modifiers: ['private'],
-				format: ['strictCamelCase'],
-				leadingUnderscore: 'require'
-			},
-			{
-				selector: 'enumMember',
-				format: ['strictCamelCase', 'StrictPascalCase', 'UPPER_CASE']
-			},
-			{
-				selector: 'typeLike',
-				format: ['StrictPascalCase']
-			},
-			{
-				selector: 'interface',
-				format: ['StrictPascalCase'],
-				custom: {
-					regex: '^I[A-Z]',
-					match: false
-				}
-			}
-		]),
+		'array-callback-return': ['error', { checkForEach: true }],
 		'consistent-return': 'error',
+		'constructor-super': 'error',
 		curly: ['error', 'all'],
 		'default-case': 'error',
+		'default-case-last': 'error',
 		// not a thing right now
 		// 'deprecation': 'error',
+		'dot-notation': 'error',
 		eqeqeq: [
 			'error',
 			'always',
@@ -252,8 +256,11 @@ module.exports = {
 			}
 		],
 		'eol-last': ['error', 'always'],
+		'for-direction': 'error',
 		'fp/no-delete': 'error',
-		'guard-for-in': 'error',
+		'func-style': ['error', 'declaration', { allowArrowFunctions: true }],
+		'getter-return': 'error',
+		'grouped-accessor-pairs': ['error', 'getBeforeSet'],
 		'import/no-duplicates': ['error', { 'prefer-inline': true }],
 		'import/no-unassigned-import': 'error',
 		'jsdoc/check-alignment': 'error',
@@ -280,16 +287,32 @@ module.exports = {
 			}
 		],
 		'jsdoc/newline-after-description': ['error', 'always'],
+		'logical-assignment-operators': ['error', 'always', { enforceForIfStatements: true }],
 		'max-classes-per-file': ['error', 1],
+		'no-alert': 'error',
+		'no-async-promise-executor': 'error',
 		'no-bitwise': 'error',
 		'no-caller': 'error',
+		'no-case-declarations': 'error',
+		'no-class-assign': 'error',
+		'no-compare-neg-zero': 'error',
 		'no-cond-assign': 'error',
 		'no-console': 'error',
+		'no-constructor-return': 'error',
 		'no-debugger': 'error',
+		'no-delete-var': 'error',
+		'no-dupe-args': 'error',
+		'no-dupe-else-if': 'error',
+		'no-dupe-keys': 'error',
 		'no-duplicate-case': 'error',
+		'no-else-return': ['error', { allowElseIf: false }],
 		'no-empty': 'error',
 		'no-empty-character-class': 'error',
+		'no-empty-pattern': 'error',
+		'no-empty-static-block': 'error',
 		'no-eval': 'error',
+		'no-extend-native': 'error',
+		'no-extra-boolean-cast': 'error',
 		'no-extra-semi': 'error',
 		'no-ex-assign': 'error',
 		'no-fallthrough': [
@@ -298,19 +321,51 @@ module.exports = {
 				commentPattern: 'fallthrough'
 			}
 		],
+		'no-func-assign': 'error',
+		'no-implicit-globals': 'error',
+		'no-import-assign': 'error',
 		'no-irregular-whitespace': 'error',
 		'no-labels': 'error',
+		'no-lonely-if': 'error',
+		'no-loop-func': 'error',
+		'no-loss-of-precision': 'error',
+		'no-misleading-character-class': 'error',
 		'no-negated-condition': 'error',
 		'no-new': 'error',
 		'no-new-wrappers': 'error',
+		'no-obj-calls': 'error',
+		'no-object-constructor': 'error',
+		'no-octal': 'error',
+		'no-octal-escape': 'error',
+		'no-promise-executor-return': 'error',
 		'no-prototype-builtins': 'error',
+		'no-regex-spaces': 'error',
+		'no-restricted-syntax': ['error', 'ForInStatement'],
+		'no-self-assign': 'error',
+		'no-self-compare': 'error',
 		'no-sequences': 'error',
+		'no-shadow-restricted-names': 'error',
 		'no-sparse-arrays': 'error',
 		'no-throw-literal': 'error',
 		'no-unexpected-multiline': 'error',
+		'no-unmodified-loop-condition': 'error',
 		'no-unneeded-ternary': 'error',
+		'no-unreachable': 'error',
+		'no-unreachable-loop': 'error',
 		'no-unsafe-finally': 'error',
+		'no-unsafe-optional-chaining': 'error',
+		'no-unused-private-class-members': 'error',
+		'no-useless-backreference': 'error',
+		'no-useless-call': 'error',
+		'no-useless-catch': 'error',
+		'no-useless-computed-key': 'error',
+		'no-useless-concat': 'error',
+		'no-useless-rename': 'error',
+		'no-useless-return': 'error',
 		'no-var': 'error',
+		'no-with': 'error',
+		'object-shorthand': 'error',
+		'operator-assignment': 'error',
 		'prefer-arrow-callback': [
 			'error',
 			{
@@ -324,11 +379,17 @@ module.exports = {
 				ignoreReadBeforeAssign: true
 			}
 		],
+		'prefer-destructuring': 'error',
+		'prefer-exponentiation-operator': 'error',
+		'prefer-numeric-literals': 'error',
 		'prefer-object-spread': 'error',
+		'prefer-promise-reject-errors': 'error',
 		'prefer-rest-params': 'error',
+		'prefer-spread': 'error',
 		'prefer-template': 'error',
 		quotes: ['error', 'single', { avoidEscape: true }],
 		radix: ['error', 'always'],
+		'require-atomic-updates': 'error',
 		'spaced-comment': [
 			'error',
 			'always',
@@ -336,6 +397,7 @@ module.exports = {
 				markers: ['*', '/']
 			}
 		],
+		'symbol-description': 'error',
 		'use-isnan': 'error',
 		yoda: ['error', 'never']
 	}
