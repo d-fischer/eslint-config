@@ -285,7 +285,7 @@ module.exports = {
 				]
 			}
 		],
-		'jsdoc/tag-lines': ['error', { startLines: 1 }],
+		'jsdoc/tag-lines': ['error', 'any', { startLines: 1 }],
 		'logical-assignment-operators': ['error', 'always', { enforceForIfStatements: true }],
 		'max-classes-per-file': ['error', 1],
 		'no-alert': 'error',
