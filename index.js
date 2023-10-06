@@ -153,7 +153,6 @@ module.exports = {
 		]),
 		'@typescript-eslint/no-dynamic-delete': 'error',
 		'@typescript-eslint/no-dupe-class-members': 'error',
-		'@typescript-eslint/no-duplicate-imports': 'error',
 		'@typescript-eslint/no-empty-function': 'error',
 		'@typescript-eslint/no-empty-interface': 'error',
 		'@typescript-eslint/no-explicit-any': 'error',
@@ -286,7 +285,7 @@ module.exports = {
 				]
 			}
 		],
-		'jsdoc/newline-after-description': ['error', 'always'],
+		'jsdoc/tag-lines': ['error', { startLines: 1 }],
 		'logical-assignment-operators': ['error', 'always', { enforceForIfStatements: true }],
 		'max-classes-per-file': ['error', 1],
 		'no-alert': 'error',
