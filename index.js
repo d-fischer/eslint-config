@@ -254,6 +254,7 @@ module.exports = {
 		'eol-last': ['error', 'always'],
 		'fp/no-delete': 'error',
 		'guard-for-in': 'error',
+		'import/no-duplicates': ['error', { 'prefer-inline': true }],
 		'import/no-unassigned-import': 'error',
 		'jsdoc/check-alignment': 'error',
 		'jsdoc/check-indentation': 'error',
