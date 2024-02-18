@@ -140,6 +140,10 @@ module.exports = {
 					regex: '^I[A-Z]',
 					match: false
 				}
+			},
+			{
+				selector: 'import',
+				format: ['strictCamelCase', 'StrictPascalCase']
 			}
 		]),
 		'@typescript-eslint/no-array-constructor': 'error',
