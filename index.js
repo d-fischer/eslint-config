@@ -220,7 +220,7 @@ module.exports = {
 		'@typescript-eslint/prefer-function-type': 'error',
 		'@typescript-eslint/prefer-includes': errorIfTypeInfo,
 		'@typescript-eslint/prefer-nullish-coalescing': errorIfTypeInfo,
-		'@typescript-eslint/prefer-optional-chain': 'error',
+		'@typescript-eslint/prefer-optional-chain': errorIfTypeInfo,
 		'@typescript-eslint/prefer-readonly': errorIfTypeInfo,
 		'@typescript-eslint/prefer-reduce-type-parameter': errorIfTypeInfo,
 		'@typescript-eslint/prefer-regexp-exec': errorIfTypeInfo,
