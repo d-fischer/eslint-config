@@ -10,6 +10,7 @@
   "funding": "https://github.com/sponsors/d-fischer",
   "license": "MIT",
   "type": "module",
+  "main": "index.js",
   "dependencies": {
     "@stylistic/eslint-plugin": "^5.10.0",
     "@typescript-eslint/eslint-plugin": "^8.56.1",
