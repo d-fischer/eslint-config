@@ -9,22 +9,24 @@
   "author": "Daniel Fischer <daniel@d-fischer.dev>",
   "funding": "https://github.com/sponsors/d-fischer",
   "license": "MIT",
+  "type": "module",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^7.1.1",
-    "@typescript-eslint/parser": "^7.1.1",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "@typescript-eslint/eslint-plugin": "^8.56.1",
+    "@typescript-eslint/parser": "^8.56.1",
     "eslint-plugin-fp": "^2.3.0",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-jsdoc": "^48.2.1"
+    "eslint-plugin-jsdoc": "^62.7.1"
   },
   "devDependencies": {
-    "eslint": "^8.57.0",
+    "eslint": "^9.39.4",
+    "eslint-plugin-import": "^2.32.0",
     "husky": "^4.3.6",
     "lint-staged": "^15.2.2",
-    "prettier": "^3.2.5",
+    "prettier": "^3.8.1",
     "typescript": "~5.4.2"
   },
   "peerDependencies": {
-    "eslint": "^8.50.0",
+    "eslint": "^9.39.4",
     "typescript": ">=4.5.2"
   },
   "files": [
