@@ -15,11 +15,7 @@ export default defineConfig([
 		languageOptions: {
 			parser: tsParser,
 			ecmaVersion: 2019,
-			sourceType: 'module',
-
-			parserOptions: {
-				project: useTypeInfo ? 'tsconfig.json' : undefined
-			}
+			sourceType: 'module'
 		},
 
 		plugins: {
