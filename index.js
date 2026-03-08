@@ -27,6 +27,7 @@ export default defineConfig([
 		},
 
 		rules: {
+			'@stylistic/eol-last': ['error', 'always'],
 			'@stylistic/member-delimiter-style': [
 				'error',
 				{
@@ -41,6 +42,14 @@ export default defineConfig([
 				}
 			],
 			'@stylistic/no-extra-semi': 'error',
+			'@stylistic/quotes': ['error', 'single', { avoidEscape: true }],
+			'@stylistic/spaced-comment': [
+				'error',
+				'always',
+				{
+					markers: ['*', '/']
+				}
+			],
 			'@typescript-eslint/adjacent-overload-signatures': 'error',
 			'@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
 			'@typescript-eslint/await-thenable': errorIfTypeInfo,
@@ -172,7 +181,6 @@ export default defineConfig([
 			'@typescript-eslint/no-dynamic-delete': 'error',
 			'@typescript-eslint/no-dupe-class-members': 'error',
 			'@typescript-eslint/no-empty-function': 'error',
-			'@typescript-eslint/no-empty-interface': 'error',
 			'@typescript-eslint/no-empty-object-type': 'error',
 			'@typescript-eslint/no-explicit-any': 'error',
 			'@typescript-eslint/no-extra-non-null-assertion': 'error',
@@ -195,7 +203,6 @@ export default defineConfig([
 			'@typescript-eslint/no-invalid-this': 'error',
 			'@typescript-eslint/no-invalid-void-type': 'error',
 			'@typescript-eslint/no-loop-func': 'error',
-			'@typescript-eslint/no-loss-of-precision': 'error',
 			'@typescript-eslint/no-misused-new': 'error',
 			'@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
 			'@typescript-eslint/no-redeclare': 'error',
@@ -227,7 +234,6 @@ export default defineConfig([
 			'@typescript-eslint/no-unused-vars': 'error',
 			'@typescript-eslint/no-use-before-define': 'error',
 			'@typescript-eslint/no-useless-constructor': 'error',
-			'@typescript-eslint/no-var-requires': 'error',
 			'@typescript-eslint/no-wrapper-object-types': 'error',
 			'@typescript-eslint/non-nullable-type-assertion-style': errorIfTypeInfo,
 			'@typescript-eslint/only-throw-error': errorIfTypeInfo,
@@ -273,7 +279,6 @@ export default defineConfig([
 					null: 'ignore'
 				}
 			],
-			'eol-last': ['error', 'always'],
 			'for-direction': 'error',
 			'fp/no-delete': 'error',
 			'func-style': ['error', 'declaration', { allowArrowFunctions: true }],
@@ -331,7 +336,6 @@ export default defineConfig([
 			'no-eval': 'error',
 			'no-extend-native': 'error',
 			'no-extra-boolean-cast': 'error',
-			'no-extra-semi': 'error',
 			'no-ex-assign': 'error',
 			'no-fallthrough': [
 				'error',
@@ -405,16 +409,8 @@ export default defineConfig([
 			'prefer-rest-params': 'error',
 			'prefer-spread': 'error',
 			'prefer-template': 'error',
-			quotes: ['error', 'single', { avoidEscape: true }],
 			radix: ['error', 'always'],
 			'require-atomic-updates': 'error',
-			'spaced-comment': [
-				'error',
-				'always',
-				{
-					markers: ['*', '/']
-				}
-			],
 			'symbol-description': 'error',
 			'use-isnan': 'error',
 			yoda: ['error', 'never']
