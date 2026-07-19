@@ -19,7 +19,7 @@ export default defineConfig([
 
 		plugins: {
 			'@stylistic': stylistic,
-			'@typescript-eslint': typescriptEslint,
+			'@typescript-eslint': typescriptEslint.plugin,
 			fp,
 			'import-x': importXPlugin,
 			jsdoc
