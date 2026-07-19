@@ -1,10 +1,9 @@
 import stylistic from '@stylistic/eslint-plugin';
-import typescriptEslint from '@typescript-eslint/eslint-plugin';
-import tsParser from '@typescript-eslint/parser';
 import fp from 'eslint-plugin-fp';
-import importPlugin from 'eslint-plugin-import';
+import importXPlugin from 'eslint-plugin-import-x';
 import jsdoc from 'eslint-plugin-jsdoc';
 import { defineConfig } from 'eslint/config';
+import typescriptEslint from 'typescript-eslint';
 
 const useTypeInfo = !process.env.DF_ESLINT_NO_TYPE_INFO;
 const ifTypeInfo = val => (useTypeInfo ? val : ['off']);
@@ -13,7 +12,7 @@ const errorIfTypeInfo = ifTypeInfo('error');
 export default defineConfig([
 	{
 		languageOptions: {
-			parser: tsParser,
+			parser: typescriptEslint.parser,
 			ecmaVersion: 2019,
 			sourceType: 'module'
 		},
@@ -22,7 +21,7 @@ export default defineConfig([
 			'@stylistic': stylistic,
 			'@typescript-eslint': typescriptEslint,
 			fp,
-			import: importPlugin,
+			'import-x': importXPlugin,
 			jsdoc
 		},
 
@@ -284,8 +283,8 @@ export default defineConfig([
 			'func-style': ['error', 'declaration', { allowArrowFunctions: true }],
 			'getter-return': 'error',
 			'grouped-accessor-pairs': ['error', 'getBeforeSet'],
-			'import/no-duplicates': ['error', { 'prefer-inline': true }],
-			'import/no-unassigned-import': 'error',
+			'import-x/no-duplicates': ['error', { 'prefer-inline': true }],
+			'import-x/no-unassigned-import': 'error',
 			'jsdoc/check-alignment': 'error',
 			'jsdoc/check-indentation': 'error',
 			'jsdoc/check-param-names': 'error',
